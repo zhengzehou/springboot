@@ -1,2 +1,3 @@
-hello: zhengzehou
-env: beta
+wordConfig:
+  preamble: The lucky word is
+  luckyWord: mmb444
