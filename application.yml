@@ -1,5 +1,14 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        instanceId: ${spring.application.name}:${spring.cloud.client.ipAddress:${random.value}}
+        serviceName: ${spring.application.name}
+        preferIpAddress: true
+        port: ${server.port}
+        healthCheckPath: ${server.context-path}/health
+        tags:
 
